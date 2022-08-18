@@ -12,6 +12,21 @@ class OcorrenciasTableViewController: UITableViewController {
     
     var fetchedResultController: NSFetchedResultsController<Ocorrencia>!
     var label = UILabel()
+    
+    lazy var fetchedResultsController: NSFetchedResultsController<Ocorrencia> = {
+        let fetchRequest: NSFetchRequest<Ocorrencia> = Ocorrencia.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let fetchedResultsController = NSFetchedResultsController(
+            fetchRequest: fetchRequest,
+            managedObjectContext: context,
+            sectionNameKeyPath: nil,
+            cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        return fetchedResultsController
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +84,14 @@ class OcorrenciasTableViewController: UITableViewController {
         
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let ocorrencia = fetchedResultController.fetchedObjects?[indexPath.row] else {return}
+            context.delete(ocorrencia)
+        }
+    }
+  
 }
 
 extension OcorrenciasTableViewController: NSFetchedResultsControllerDelegate {
@@ -77,7 +99,10 @@ extension OcorrenciasTableViewController: NSFetchedResultsControllerDelegate {
         
         switch type {
             case .delete:
-                break
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            break
             default:
                 tableView.reloadData()
         }
