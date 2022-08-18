@@ -69,7 +69,7 @@
                                 <connections>
                                     <outlet property="lblDate" destination="28H-MU-68W" id="GM6-hQ-UBJ"/>
                                     <outlet property="lblName" destination="pXW-eS-suw" id="kCs-iG-3eH"/>
-                                    <segue destination="Kua-BB-P6l" kind="show" id="7aa-V4-ilI"/>
+                                    <segue destination="Kua-BB-P6l" kind="show" identifier="ocorrenciaSegue" id="7aa-V4-ilI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,7 +81,7 @@
                     <navigationItem key="navigationItem" title="Lista de Ocorrências" largeTitleDisplayMode="always" id="YQX-h4-Jng">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="LoI-59-zca">
                             <connections>
-                                <segue destination="9JM-Uv-lSD" kind="show" id="yv2-hY-p9V"/>
+                                <segue destination="9JM-Uv-lSD" kind="show" identifier="newOcorrenciaSegue" id="yv2-hY-p9V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -189,12 +189,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCL-CL-odx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="-244"/>
+            <point key="canvasLocation" x="2471" y="86"/>
         </scene>
         <!--Visualizar Ocorrência-->
         <scene sceneID="hf8-xF-h3S">
             <objects>
-                <viewController id="Kua-BB-P6l" sceneMemberID="viewController">
+                <viewController id="Kua-BB-P6l" customClass="OcorrenciaViewController" customModule="FlavioGuilhermePaulaRafaelRodrigo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y1y-We-Z1b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,15 +223,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdM-LY-GrI">
-                                <rect key="frame" x="16" y="587.5" width="382" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="dTQ-UR-rJe"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Editar"/>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r4G-wf-c0Q">
                                 <rect key="frame" x="16" y="271.5" width="382" height="300"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -254,14 +245,11 @@
                             <constraint firstItem="8iw-KU-Lsi" firstAttribute="leading" secondItem="u5p-hU-N4C" secondAttribute="leading" constant="16" id="GG9-xY-Zz0"/>
                             <constraint firstItem="TfM-Oa-Ur9" firstAttribute="top" secondItem="4no-de-OYG" secondAttribute="bottom" constant="16" id="NiY-ZE-4LH"/>
                             <constraint firstItem="TfM-Oa-Ur9" firstAttribute="leading" secondItem="u5p-hU-N4C" secondAttribute="leading" constant="16" id="V17-N6-jFn"/>
-                            <constraint firstItem="OdM-LY-GrI" firstAttribute="top" secondItem="r4G-wf-c0Q" secondAttribute="bottom" constant="16" id="Vky-wQ-Zwu"/>
-                            <constraint firstItem="OdM-LY-GrI" firstAttribute="leading" secondItem="u5p-hU-N4C" secondAttribute="leading" constant="16" id="Y5j-ce-KDP"/>
                             <constraint firstItem="eXj-Ar-f1W" firstAttribute="leading" secondItem="u5p-hU-N4C" secondAttribute="leading" constant="16" id="YE3-4Q-BMe"/>
                             <constraint firstItem="u5p-hU-N4C" firstAttribute="trailing" secondItem="4no-de-OYG" secondAttribute="trailing" constant="16" id="aRS-WM-z1a"/>
                             <constraint firstItem="4no-de-OYG" firstAttribute="top" secondItem="u5p-hU-N4C" secondAttribute="top" constant="16" id="cAM-cY-AuO"/>
                             <constraint firstItem="eXj-Ar-f1W" firstAttribute="top" secondItem="8iw-KU-Lsi" secondAttribute="bottom" constant="16" id="pl5-I7-Dkp"/>
                             <constraint firstItem="u5p-hU-N4C" firstAttribute="trailing" secondItem="r4G-wf-c0Q" secondAttribute="trailing" constant="16" id="r2N-Zd-J5Z"/>
-                            <constraint firstItem="u5p-hU-N4C" firstAttribute="trailing" secondItem="OdM-LY-GrI" secondAttribute="trailing" constant="16" id="ra3-Fx-60f"/>
                             <constraint firstItem="u5p-hU-N4C" firstAttribute="trailing" secondItem="TfM-Oa-Ur9" secondAttribute="trailing" constant="16" id="s70-U2-tLn"/>
                             <constraint firstItem="8iw-KU-Lsi" firstAttribute="top" secondItem="TfM-Oa-Ur9" secondAttribute="bottom" constant="16" id="y8e-Nc-UCY"/>
                             <constraint firstItem="4no-de-OYG" firstAttribute="leading" secondItem="u5p-hU-N4C" secondAttribute="leading" constant="16" id="yo6-jf-7ht"/>
@@ -269,13 +257,27 @@
                     </view>
                     <navigationItem key="navigationItem" title="Visualizar Ocorrência" largeTitleDisplayMode="always" id="Ian-NC-cMV">
                         <barButtonItem key="backBarButtonItem" title=" " id="6Zq-4S-jtd"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="GVg-Q3-Hm5">
+                            <connections>
+                                <segue destination="9JM-Uv-lSD" kind="show" identifier="editOcorrenciaSegue" id="EdN-PE-hpp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lblAddress" destination="TfM-Oa-Ur9" id="lbU-FG-xbm"/>
+                        <outlet property="lblDate" destination="8iw-KU-Lsi" id="pP7-eS-sYE"/>
+                        <outlet property="lblDetails" destination="r4G-wf-c0Q" id="XBx-g0-3nG"/>
+                        <outlet property="lblName" destination="4no-de-OYG" id="cYC-oR-yIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbc-dg-WGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="417"/>
+            <point key="canvasLocation" x="1525" y="466"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EdN-PE-hpp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
@@ -286,9 +288,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -18,6 +18,7 @@
 		5B3DC65828ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DC65728ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift */; };
 		5B3DC65A28ADC91100AF1BD5 /* AddOcorrenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DC65928ADC91100AF1BD5 /* AddOcorrenciaViewController.swift */; };
 		5B3DC65C28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DC65B28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift */; };
+		5B923B1D28AE5A370017D217 /* OcorrenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B923B1C28AE5A370017D217 /* OcorrenciaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5B3DC65728ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOcorrenciaViewController.swift; sourceTree = "<group>"; };
 		5B3DC65928ADC91100AF1BD5 /* AddOcorrenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOcorrenciaViewController.swift; sourceTree = "<group>"; };
 		5B3DC65B28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcorrenciaTableViewCell.swift; sourceTree = "<group>"; };
+		5B923B1C28AE5A370017D217 /* OcorrenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcorrenciaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				5B3DC65728ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift */,
 				5B3DC65928ADC91100AF1BD5 /* AddOcorrenciaViewController.swift */,
 				5B3DC65B28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift */,
+				5B923B1C28AE5A370017D217 /* OcorrenciaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				5B3DC65C28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift in Sources */,
 				5B3DC65428ADC79200AF1BD5 /* OcorrenciasTableViewController.swift in Sources */,
 				5B3DC65A28ADC91100AF1BD5 /* AddOcorrenciaViewController.swift in Sources */,
+				5B923B1D28AE5A370017D217 /* OcorrenciaViewController.swift in Sources */,
 				5B25F8DF28AD9E1700888F56 /* ViewController+CoreData.swift in Sources */,
 				5B3DC65828ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift in Sources */,
 				5B25F8DD28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld in Sources */,

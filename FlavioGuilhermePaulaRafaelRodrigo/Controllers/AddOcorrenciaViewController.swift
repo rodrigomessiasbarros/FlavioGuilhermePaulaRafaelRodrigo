@@ -16,13 +16,21 @@ class AddOcorrenciaViewController: UIViewController {
     @IBOutlet weak var txtFieldDetails: UITextView!
     @IBOutlet weak var btnCadastrar: UIButton!
     
-    
-    
 
     var ocorrencia: Ocorrencia!
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            if ocorrencia != nil {
+                title = "Editar Ocorrência"
+                btnCadastrar.setTitle("Alterar", for: .normal)
+                txtFieldName.text = ocorrencia.name
+                txtFieldAddress.text = ocorrencia.address
+                txtFieldDate.text = ocorrencia.date
+                txtFieldDetails.text = ocorrencia.details
+            }
+            
         }
         
 
@@ -45,15 +53,5 @@ class AddOcorrenciaViewController: UIViewController {
             navigationController?.popViewController(animated: true)
             
         }
-        
-        /*
-        // MARK: - Navigation
-
-        // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            // Get the new view controller using segue.destination.
-            // Pass the selected object to the new view controller.
-        }
-        */
 
 }
