@@ -1,45 +1,65 @@
 //
-//  TableViewController.swift
+//  OcorrenciasTableViewController.swift
 //  FlavioGuilhermePaulaRafaelRodrigo
 //
 //  Created by Rodrigo Messias Barros on 17/08/22.
 //
 
 import UIKit
+import CoreData
 
-class TableViewController: UITableViewController {
+class OcorrenciasTableViewController: UITableViewController {
+    
+    var fetchedResultController: NSFetchedResultsController<Ocorrencia>!
+    var label = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        label.text = "Não há ocorrências cadastradas"
+        label.textAlignment = .center
+        
+        loadOcorrencias()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func loadOcorrencias(){
+        let fetchRequest: NSFetchRequest<Ocorrencia> = Ocorrencia.fetchRequest()
+        let sortDescritor = NSSortDescriptor(key: "name", ascending: true) // ordena por nome
+        let dataDescritor = NSSortDescriptor(key: "date", ascending: true) // ordena por data decrescente
+        fetchRequest.sortDescriptors = [dataDescritor, sortDescritor]
+        
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultController.delegate = self
+        
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        let count = fetchedResultController.fetchedObjects?.count ?? 0
+        tableView.backgroundView = count == 0 ? label : nil
+        return count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OcorrenciaTableViewCell
+        
+        guard let ocorrencia = fetchedResultController.fetchedObjects?[indexPath.row] else {
+            return cell
+        }
+        
+        cell.prepare(with: ocorrencia)
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,4 +106,18 @@ class TableViewController: UITableViewController {
     }
     */
 
+}
+
+extension OcorrenciasTableViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+            case .delete:
+                break
+            default:
+                tableView.reloadData()
+        }
+        
+        
+    }
 }

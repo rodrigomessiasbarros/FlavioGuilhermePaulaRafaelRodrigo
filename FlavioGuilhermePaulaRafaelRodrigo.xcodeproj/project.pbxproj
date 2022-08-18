@@ -9,29 +9,31 @@
 /* Begin PBXBuildFile section */
 		5B2577F528A7E2AF00BDD48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2577F428A7E2AF00BDD48A /* AppDelegate.swift */; };
 		5B2577F728A7E2AF00BDD48A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2577F628A7E2AF00BDD48A /* SceneDelegate.swift */; };
-		5B2577F928A7E2AF00BDD48A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2577F828A7E2AF00BDD48A /* ViewController.swift */; };
 		5B2577FC28A7E2AF00BDD48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2577FA28A7E2AF00BDD48A /* Main.storyboard */; };
-		5B2577FF28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B2577FD28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld */; };
 		5B25780128A7E2AF00BDD48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B25780028A7E2AF00BDD48A /* Assets.xcassets */; };
 		5B25780428A7E2AF00BDD48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B25780228A7E2AF00BDD48A /* LaunchScreen.storyboard */; };
-		5B28CBC228AD3AAB0002A3E4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28CBC128AD3AAB0002A3E4 /* TableViewController.swift */; };
-		5B5AA28628AD6AE9005D94F9 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5AA28528AD6AE9005D94F9 /* NewEventViewController.swift */; };
-		5B5AA28828AD7981005D94F9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5AA28728AD7981005D94F9 /* EventViewController.swift */; };
+		5B25F8DD28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F8DB28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld */; };
+		5B25F8DF28AD9E1700888F56 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F8DE28AD9E1700888F56 /* ViewController+CoreData.swift */; };
+		5B3DC65428ADC79200AF1BD5 /* OcorrenciasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DC65328ADC79200AF1BD5 /* OcorrenciasTableViewController.swift */; };
+		5B3DC65828ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DC65728ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift */; };
+		5B3DC65A28ADC91100AF1BD5 /* AddOcorrenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DC65928ADC91100AF1BD5 /* AddOcorrenciaViewController.swift */; };
+		5B3DC65C28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DC65B28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B2577F128A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlavioGuilhermePaulaRafaelRodrigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2577F428A7E2AF00BDD48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B2577F628A7E2AF00BDD48A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B2577F828A7E2AF00BDD48A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B2577FB28A7E2AF00BDD48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5B2577FE28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel; sourceTree = "<group>"; };
 		5B25780028A7E2AF00BDD48A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B25780328A7E2AF00BDD48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B25780528A7E2AF00BDD48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B28CBC128AD3AAB0002A3E4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		5B5AA28528AD6AE9005D94F9 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
-		5B5AA28728AD7981005D94F9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		5B25F8DC28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel; sourceTree = "<group>"; };
+		5B25F8DE28AD9E1700888F56 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
+		5B3DC65328ADC79200AF1BD5 /* OcorrenciasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcorrenciasTableViewController.swift; sourceTree = "<group>"; };
+		5B3DC65728ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOcorrenciaViewController.swift; sourceTree = "<group>"; };
+		5B3DC65928ADC91100AF1BD5 /* AddOcorrenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOcorrenciaViewController.swift; sourceTree = "<group>"; };
+		5B3DC65B28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcorrenciaTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +66,44 @@
 		5B2577F328A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo */ = {
 			isa = PBXGroup;
 			children = (
-				5B2577F428A7E2AF00BDD48A /* AppDelegate.swift */,
+				5B3DC65628ADC7F800AF1BD5 /* Files */,
+				5B3DC65528ADC7C800AF1BD5 /* Controllers */,
+				5BC0D59E28ADC4EF00E0ADE0 /* Views */,
 				5B2577F628A7E2AF00BDD48A /* SceneDelegate.swift */,
-				5B28CBC128AD3AAB0002A3E4 /* TableViewController.swift */,
-				5B2577F828A7E2AF00BDD48A /* ViewController.swift */,
-				5B5AA28528AD6AE9005D94F9 /* NewEventViewController.swift */,
-				5B5AA28728AD7981005D94F9 /* EventViewController.swift */,
-				5B2577FA28A7E2AF00BDD48A /* Main.storyboard */,
+				5B2577F428A7E2AF00BDD48A /* AppDelegate.swift */,
 				5B25780028A7E2AF00BDD48A /* Assets.xcassets */,
-				5B25780228A7E2AF00BDD48A /* LaunchScreen.storyboard */,
 				5B25780528A7E2AF00BDD48A /* Info.plist */,
-				5B2577FD28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld */,
 			);
 			path = FlavioGuilhermePaulaRafaelRodrigo;
+			sourceTree = "<group>";
+		};
+		5B3DC65528ADC7C800AF1BD5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B25F8DE28AD9E1700888F56 /* ViewController+CoreData.swift */,
+				5B3DC65328ADC79200AF1BD5 /* OcorrenciasTableViewController.swift */,
+				5B3DC65728ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift */,
+				5B3DC65928ADC91100AF1BD5 /* AddOcorrenciaViewController.swift */,
+				5B3DC65B28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5B3DC65628ADC7F800AF1BD5 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B25F8DB28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		5BC0D59E28ADC4EF00E0ADE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B2577FA28A7E2AF00BDD48A /* Main.storyboard */,
+				5B25780228A7E2AF00BDD48A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,12 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B2577F928A7E2AF00BDD48A /* ViewController.swift in Sources */,
-				5B2577FF28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld in Sources */,
-				5B5AA28828AD7981005D94F9 /* EventViewController.swift in Sources */,
+				5B3DC65C28ADDE4000AF1BD5 /* OcorrenciaTableViewCell.swift in Sources */,
+				5B3DC65428ADC79200AF1BD5 /* OcorrenciasTableViewController.swift in Sources */,
+				5B3DC65A28ADC91100AF1BD5 /* AddOcorrenciaViewController.swift in Sources */,
+				5B25F8DF28AD9E1700888F56 /* ViewController+CoreData.swift in Sources */,
+				5B3DC65828ADC8A100AF1BD5 /* ShowOcorrenciaViewController.swift in Sources */,
+				5B25F8DD28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld in Sources */,
 				5B2577F528A7E2AF00BDD48A /* AppDelegate.swift in Sources */,
-				5B28CBC228AD3AAB0002A3E4 /* TableViewController.swift in Sources */,
-				5B5AA28628AD6AE9005D94F9 /* NewEventViewController.swift in Sources */,
 				5B2577F728A7E2AF00BDD48A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,16 +331,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlavioGuilhermePaulaRafaelRodrigo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Meu Bairro";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,16 +363,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlavioGuilhermePaulaRafaelRodrigo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Meu Bairro";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,12 +412,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5B2577FD28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld */ = {
+		5B25F8DB28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5B2577FE28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel */,
+				5B25F8DC28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel */,
 			);
-			currentVersion = 5B2577FE28A7E2AF00BDD48A /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel */;
+			currentVersion = 5B25F8DC28AD9BB500888F56 /* FlavioGuilhermePaulaRafaelRodrigo.xcdatamodel */;
 			path = FlavioGuilhermePaulaRafaelRodrigo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
